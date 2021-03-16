@@ -86,7 +86,7 @@ func scanImageFile(filePath string) (w, h int, err error) {
 	}
 	defer func() {
 		if err := f.Close(); err != nil {
-			_, _ = fmt.Fprintf(os.Stderr, "Failed to open file: %v\n", err)
+			_, _ = fmt.Fprintf(os.Stderr, "Failed to close file: %v\n", err)
 		}
 	}()
 
